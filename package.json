@@ -1,8 +1,17 @@
 {
   "name": "kepixel-tracking-scanner",
-  "version": "2.3.0",
+  "version": "3.0.0",
   "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "check": "node --check api/scan.js && node --check src/scanner-core.js && node --check src/browser-scan.js && node --check src/signatures.js && node --check src/network.js && node --check src/detection.js && node --check src/quality.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
   "dependencies": {
-    "cheerio": "^1.0.0"
+    "@sparticuz/chromium": "^131.0.0",
+    "cheerio": "^1.0.0",
+    "puppeteer-core": "^23.11.1"
   }
 }
